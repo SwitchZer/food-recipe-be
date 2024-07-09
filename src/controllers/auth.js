@@ -36,6 +36,13 @@ const login = async (req, res, next) => {
       path: "/",
       sameSite: "Lax",
     });
+    res.cookie("refresh-token", user.refreshToken, {
+      httpOnly: true,
+      maxAge: 60 * 1000 * 60 * 48,
+      secure: false,
+      path: "/",
+      sameSite: "Lax",
+    });
     response(res, user, 201, "User success Login");
   } catch (error) {
     console.log(error);
@@ -83,12 +90,13 @@ const logout = async (req, res, next) => {
     path: "/",
     sameSite: "Lax",
   });
+  
   response(res, null, 200, "Logout Success");
 };
 
 const refreshToken = (req, res, next)=>{
   
-  const refreshToken = req.body.refreshToken
+  const refreshToken = req.body.refreshToken || req.cookies['refresh-token']
   const decoded = jwt.verify(refreshToken, process.env.SECRET_KEY_JWT)
 
   const payload = {
