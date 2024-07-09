@@ -104,10 +104,25 @@ const refreshToken = (req, res, next)=>{
     role: decoded.role
   }
 
+  
   const data = {
     token: generateToken(payload),
     refreshToken: gerateRefreshToken(payload)
   }
+  res.cookie("token", data.token, {
+    httpOnly: true,
+    maxAge: 60 * 1000 * 60 * 12,
+    secure: false,
+    path: "/",
+    sameSite: "Lax",
+  });
+  res.cookie("refresh-token", data.refreshToken, {
+    httpOnly: true,
+    maxAge: 60 * 1000 * 60 * 48,
+    secure: false,
+    path: "/",
+    sameSite: "Lax",
+  });
   response(res, data, 200, 'Refresh Token Success')
 }
 
