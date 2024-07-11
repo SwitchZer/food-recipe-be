@@ -36,7 +36,8 @@ const updateProfile = async(req, res, next)=>{
             data:{
                 name,
                 phone,
-                ...(photo ? {photo}:{})
+                ...(photo ? {photo}:{}),
+                updated_at: new Date()
             },
             where:{
                 id: user.id
