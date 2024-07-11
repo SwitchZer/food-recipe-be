@@ -19,6 +19,7 @@ model User {
   password    String    @db.VarChar(64)
   name        String    @db.VarChar(64)
   phone       String?    @db.VarChar(16)
+  photo       String?    @db.VarChar(64)
   created_at  DateTime  @db.Timestamp() @default(now())
   updated_at  DateTime? @db.Timestamp()
   recipes     Recipe[]
