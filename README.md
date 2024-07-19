@@ -32,7 +32,7 @@ The backend of the Food Recipe platform is responsible for powering the core fun
 #### Clone this repository :
 
 ```bash
-  git clone https://github.com/SwitchZer/hire-job-backend.git
+  git clone https://github.com/SwitchZer/food-recipe-be.git
 ```
 
 #### Install Module on Project Directory :
