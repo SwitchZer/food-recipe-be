@@ -27,6 +27,52 @@ The backend of the Food Recipe platform is responsible for powering the core fun
 - Search, Pagination dan Sort Recipe
 - Detail Recipe, like and save recipe
 
+## Project Structure
+
+```
+└── 📁backend
+    └── .env
+    └── .gitignore
+    └── eslint.config.mjs
+    └── index.js
+    └── package-lock.json
+    └── package.json
+    └── README.md
+    └── 📁prisma
+        └── schema.prisma
+    └── 📁src
+        └── 📁controllers
+            └── auth.js
+            └── payment.js
+            └── recipes.js
+            └── upload.js
+            └── users.js
+        └── 📁herlpers
+            └── auth.js
+            └── common.js
+        └── 📁middlewares
+            └── auth.js
+            └── upload.js
+        └── 📁models
+            └── auth.js
+            └── experience.js
+            └── hire.js
+            └── portofolio.js
+            └── recruiters.js
+            └── skill.js
+            └── workers.js
+        └── 📁routes
+            └── auth.js
+            └── index.js
+            └── payment.js
+            └── recipes.js
+            └── upload.js
+            └── users.js
+        └── 📁utils
+            └── cloudinary.js
+    └── vercel.json
+```
+
 ## Installation
 
 #### Clone this repository :
