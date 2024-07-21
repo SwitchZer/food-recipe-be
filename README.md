@@ -4,7 +4,7 @@ The backend of the Food Recipe platform is responsible for powering the core fun
 
 ## Documentation
 
-⚡[Peworld Backend](https://documenter.getpostman.com/view/7675329/2sA3QqerrC)
+⚡[Food Recipe Backend](https://documenter.getpostman.com/view/7675329/2sA3QqerrC)
 
 ## Tech Stack
 
